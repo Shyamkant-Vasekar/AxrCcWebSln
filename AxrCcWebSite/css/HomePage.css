@@ -18,9 +18,8 @@
   width: 960px;
   height: 120px;
   overflow: auto;
-  margin: auto;
-  background-color: burlywood;  
-  top: 0px; /*Unless this it starts from 8px*/
+  background-color: #CCFFFF;
+  top: 0px; /*Imp else gap on top of page*/
   position: fixed;
   text-align: center;
 }
@@ -29,43 +28,46 @@
   float: left;
   width: 120px;
   height: 450px;
-  /*As here not included top: 0px starts from 120+8=128 hence displays
-    8px gap between #Heading and other #elements*/
   margin-top: 120px;
-  background-color: magenta;
+  background-color: #BBFFD8;
   overflow: auto;
+
 }
 
 #FirstColMid {
+  border: 3px solid #6AFFFF;
   float: left;
-  width: 600px;
-  height: 200px;
+  width: 594px;/*600px; adjust for 3px border*/
+  height: 194px;/*200px; adjust for 3px border*/
   margin-top: 120px;
-  background-color: lightgreen;
+  background-color: lightcyan;
 }
 
 #FirstColRight {
+  border: 3px solid #6AFFFF;
   float: left;
-  width: 240px;
-  height: 300px;
+  width: 234px;/*240px; adjust for 3px border*/
+  height: 294px;/*300px; adjust for 3px border*/
   margin-top: 120px;
   background-color:lightcyan;
 }
 
 
 #Special1 {
+  border: 3px solid #6AFFFF;
   float: left;
-  width: 600px;
-  height: 250px;
+  width: 594px;/*600px; adjust for 3px border*/
+  height: 244px;/*250px; adjust for 3px border*/
   margin-top: -100px;
-  background-color: rgba(255,255,255,0);
+  background-color: lightcyan;/*rgba(255,255,255,0);*/
 }
 
 #Special2 {
+  border: 3px solid #6AFFFF;
   float: left;
-  width: 240px;
-  height: 150px;
-  background-color: lightskyblue;
+  width: 234px;/*240px; adjust for 3px border*/
+  height: 144px;/*150px; adjust for 3px border*/
+  background-color: lightcyan;
 }
 
 
@@ -91,7 +93,7 @@
 .SingleColumn {
   float: left;
   width: 960px;
-  background-color: lightcoral;
+  background-color: #C0C0C0;
 }
 
 
