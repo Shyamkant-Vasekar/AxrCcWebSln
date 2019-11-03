@@ -2,53 +2,57 @@
   background-color: cornsilk;
   background-image: url('../img/Science-bg1.png');
   background-attachment: fixed;
-
 }
 
 
 /*Everything inside this limit*/
+/*Three divisions shall approximatly of 12.5%, 62.5% and 25%*/
 #Wrap {
   margin: auto;
-  width: 960px;
+  width: 1200px;
   margin: auto;
   overflow: auto;
 }
 
+
+
+
 #Heading {
-  width: 960px;
-  height: 120px;
+  width: 1200px;
+  height: 120px; /*120 original plus 40 for menu*/
   overflow: auto;
   background-color: #CCFFFF;
   top: 0px; /*Imp else gap on top of page*/
   position: fixed;
   text-align: center;
+  background-image: url('../img/ScienceSmall.png');
 }
 
 #FirstColLeft {
   float: left;
-  width: 120px;
+  width: 150px;
   height: 450px;
-  margin-top: 120px;
-  background-color: #BBFFD8;
+  margin-top: 160px; /* Heading + Menu height*/
+  background-color: #D7EBFF;
   overflow: auto;
-
 }
 
 #FirstColMid {
   border: 3px solid #6AFFFF;
   float: left;
-  width: 594px;/*600px; adjust for 3px border*/
-  height: 194px;/*200px; adjust for 3px border*/
-  margin-top: 120px;
+  width: 744px; /*750px; adjust for 3px border*/
+  height: 194px; /*200px; adjust for 3px border*/
+  margin-top: 160px; /* Heading + Menu height*/
   background-color: lightcyan;
+  background-image: url('../img/Mscit.jpg');
 }
 
 #FirstColRight {
   border: 3px solid #6AFFFF;
   float: left;
-  width: 234px;/*240px; adjust for 3px border*/
+  width: 294px;/*300px; adjust for 3px border*/
   height: 294px;/*300px; adjust for 3px border*/
-  margin-top: 120px;
+  margin-top: 160px; /* Heading + Menu height*/
   background-color:lightcyan;
 }
 
@@ -56,7 +60,7 @@
 #Special1 {
   border: 3px solid #6AFFFF;
   float: left;
-  width: 594px;/*600px; adjust for 3px border*/
+  width: 744px;/*750px; adjust for 3px border*/
   height: 244px;/*250px; adjust for 3px border*/
   margin-top: -100px;
   background-color: lightcyan;/*rgba(255,255,255,0);*/
@@ -65,36 +69,130 @@
 #Special2 {
   border: 3px solid #6AFFFF;
   float: left;
-  width: 234px;/*240px; adjust for 3px border*/
-  height: 144px;/*150px; adjust for 3px border*/
+  width: 294px; /*300px; adjust for 3px border*/
+  height: 144px; /*150px; adjust for 3px border*/
   background-color: lightcyan;
+  background-image: url('../img/ScienceSmall.png');
 }
+
+
+/*First time decided for under construction page*/
+#FirstSingleColumn {
+  float: left;
+  width: 1200px;
+  /*background-color: #C0C0C0;*/
+  margin-top: 160px;
+}
+
 
 
 .ColLeft {
   float: left;
-  width: 120px;
+  width: 150px;
   background-color: lightblue;
 }
 
 .ColMid {
   float: left;
-  width: 600px;
+  width: 750px;
   background-color: lightgreen;
 }
 
 .ColRight {
   float: left;
-  width: 240px;
+  width: 300px;
   background-color: lightpink;
 }
 
 
 .SingleColumn {
   float: left;
-  width: 960px;
+  width: 1200px;
   background-color: #C0C0C0;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: background-color .7s ease-out;
+}
+
+.button:hover {
+  background-color: #7CC580;
+  color: darkblue;
+}
+
+
+/*a:link { color: red; }
+a:visited { color: purple; }*/
+
+@font-face {
+  font-family: myFirstFont;
+  /*src: url("../fnt/Hallo sans black.otf");*/
+  /*Ikaros-Regular*/
+  src: url("../fnt/Ikaros-Regular.otf");
+  /*Quantico-Bold*/
+  src: url("../fnt/Quantico-Bold.ttf");
+}
+
+.buttonLeft{
+  width: 112px;
+  height: 10px;
+  /*font-size: 32px;*/
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  padding: 30px 16px;
+  margin: 0;
+  cursor: pointer;
+  border: 1px solid #269CE9;
+  overflow: visible;
+  font: bold 13px arial, helvetica, sans-serif;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #fff;
+  
+  background-color: #269CE9;
+  background-image: linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+
+
+  transition: background-color .7s ease-out;
+  background-clip: padding-box; /* Fix bleeding */
+
+  border-radius: 8px;
+
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+  text-shadow: 0 1px 0 rgba(0,0,0,.2);
+  
+  user-select: none;
+}
+
+.buttonLeft:hover{
+  background-color: #70B9E8;
 }
 
 
 
+/*div#FirstColLeft a {
+display:block;
+height:60px;
+font:12px/25px Tahoma, Arial, Helvetica, sans-serif;
+background:#a7b0af;
+color:#2a302f;
+text-decoration:none;
+padding-left:10px;
+border-bottom:solid 1px #44504f;
+}
+div#FirstColLeft a:hover, div#FirstColLeft a:visited, div#FirstColLeft a.active {
+background:#44504f;
+border-bottom:solid 1px #a7b0af;
+color:#FFFFFF;
+}*/
