@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Product Id="15340B9F-0393-409A-82DA-1E6F7A991F14" Name="PowerLinkV2" Language="1033" Version="2.1.0" Manufacturer="EngineersKatta" UpgradeCode="92153AE4-0065-4937-B03B-C60591C3BDFC">
+        <Package Description="Test file in a Product" Comments="Simple test" InstallerVersion="210" Compressed="yes" />
+        <Property Id="NETFRAMEWORK45">
+            <RegistrySearch Id="NetFramework45" Root="HKLM" Key="Software\Microsoft\NET Framework Setup\NDP\v4\Full" Name="Install" Type="raw" />
+        </Property>
+        <Condition Message="This application requires .NET Framework 4.5. Please install the .NET Framework then run this installer again."><![CDATA[Installed OR NETFRAMEWORK45]]></Condition>
+        <Media Id="1" Cabinet="simple.cab" EmbedCab="yes" />
+        <Directory Id="TARGETDIR" Name="SourceDir">
+            <Directory Id="ProgramFilesFolder" Name="PFiles">
+                <Directory Id="POWERLINKV2" Name="PowerLinkV2">
+                    <Component Id="AXINTEROP.MSSCRIPTCONTROL.DLL" DiskId="1" Guid="0C28E92A-A908-43AF-A68F-91596376AF6F">
+                        <File Id="AXINTEROP.MSSCRIPTCONTROL.DLL" Name="AxInterop.MSScriptControl.dll" Source="F:\MyWork\GitHub\AxrCcWebSln\AxrCcWebSite\EngineersKatta\Archive\PowerLinkMSI\ExeFolder\PowerLinkV2\AxInterop.MSScriptControl.dll" />
+                    </Component>
+                    <Component Id="CHECKNETCLASS.DLL" DiskId="1" Guid="0EC65698-B316-44C4-88A9-F4EE688BD52C">
+                        <File Id="CHECKNETCLASS.DLL" Name="CheckNetClass.dll" Source="F:\MyWork\GitHub\AxrCcWebSln\AxrCcWebSite\EngineersKatta\Archive\PowerLinkMSI\ExeFolder\PowerLinkV2\CheckNetClass.dll" />
+                    </Component>
+                    <Component Id="EASYMODBUS.DLL" DiskId="1" Guid="0279BC8C-D5C4-4B98-A41F-0DF945592633">
+                        <File Id="EASYMODBUS.DLL" Name="EasyModbus.dll" Source="F:\MyWork\GitHub\AxrCcWebSln\AxrCcWebSite\EngineersKatta\Archive\PowerLinkMSI\ExeFolder\PowerLinkV2\EasyModbus.dll" />
+                    </Component>
+                    <Component Id="INTEROP.MSSCRIPTCONTROL.DLL" DiskId="1" Guid="903504FC-CC5E-4F23-B097-605FFBD7C61D">
+                        <File Id="INTEROP.MSSCRIPTCONTROL.DLL" Name="Interop.MSScriptControl.dll" Source="F:\MyWork\GitHub\AxrCcWebSln\AxrCcWebSite\EngineersKatta\Archive\PowerLinkMSI\ExeFolder\PowerLinkV2\Interop.MSScriptControl.dll" />
+                    </Component>
+                    <Component Id="MFM.DLL" DiskId="1" Guid="65F36D55-47DE-49EA-840E-41BD1737B70C">
+                        <File Id="MFM.DLL" Name="Mfm.dll" Source="F:\MyWork\GitHub\AxrCcWebSln\AxrCcWebSite\EngineersKatta\Archive\PowerLinkMSI\ExeFolder\PowerLinkV2\Mfm.dll" />
+                    </Component>
+                    <Component Id="POWERLINKV2.EXE" DiskId="1" Guid="24391DD4-D616-413F-B172-D710E32EC47B">
+                        <File Id="POWERLINKV2.EXE" Name="PowerLinkV2.exe" Source="F:\MyWork\GitHub\AxrCcWebSln\AxrCcWebSite\EngineersKatta\Archive\PowerLinkMSI\ExeFolder\PowerLinkV2\PowerLinkV2.exe">
+                            <Shortcut Id="desktopShortcut" Directory="DesktopFolder" Name="PowerLinkV2" WorkingDirectory="INSTALLDIR" Advertise="yes" Icon="DesktopIcon.exe" IconIndex="0" />
+                            <Shortcut Id="ExeShortcut" Directory="ProgramMenuDir" Name="PowerLinkV2" Advertise="yes" Icon="StartMenuIcon.exe" IconIndex="0" />
+                        </File>
+                    </Component>
+                    <Component Id="SQLITE.INTEROP.DLL" DiskId="1" Guid="539080AC-2817-4665-BF19-80C6E37D8D16">
+                        <File Id="SQLITE.INTEROP.DLL" Name="SQLite.Interop.dll" Source="F:\MyWork\GitHub\AxrCcWebSln\AxrCcWebSite\EngineersKatta\Archive\PowerLinkMSI\ExeFolder\PowerLinkV2\SQLite.Interop.dll" />
+                    </Component>
+                    <Component Id="SYSTEM.DATA.SQLITE.DLL" DiskId="1" Guid="20F07B4B-4EF3-4FD7-B7E4-758EAFAABFDA">
+                        <File Id="SYSTEM.DATA.SQLITE.DLL" Name="System.Data.SQLite.dll" Source="F:\MyWork\GitHub\AxrCcWebSln\AxrCcWebSite\EngineersKatta\Archive\PowerLinkMSI\ExeFolder\PowerLinkV2\System.Data.SQLite.dll" />
+                    </Component>
+                </Directory>
+            </Directory>
+            <Directory Id="CommonAppDataFolder" Name="CommonAppDataFolder">
+                <Directory Id="POWERLINKV2_1" Name="PowerLinkV2">
+                    <Component Id="MFMSETUP.BIN" DiskId="1" Guid="45C476EF-D59D-4E0E-8890-7754D6DEC9FE">
+                        <File Id="MFMSETUP.BIN" Name="MfmSetup.bin" Source="F:\MyWork\GitHub\AxrCcWebSln\AxrCcWebSite\EngineersKatta\Archive\PowerLinkMSI\DataFolder\PowerLinkV2\MfmSetup.bin" />
+                    </Component>
+                    <Component Id="POWERLINKV2.MPLX" DiskId="1" Guid="BA22BEA5-5736-4AED-AF69-53976582AF64">
+                        <File Id="POWERLINKV2.MPLX" Name="PowerLinkV2.mplx" Source="F:\MyWork\GitHub\AxrCcWebSln\AxrCcWebSite\EngineersKatta\Archive\PowerLinkMSI\DataFolder\PowerLinkV2\PowerLinkV2.mplx" />
+                    </Component>
+                </Directory>
+            </Directory>
+            <Directory Id="DesktopFolder" />
+            <Directory Id="ProgramMenuFolder">
+                <Directory Id="ProgramMenuDir" Name="PowerLinkV2">
+                    <Component Id="StartMenuShortcuts" Guid="4C88E691-7CD1-4289-8798-CBC713F2B9A4">
+                        <RemoveFolder Id="ProgramMenuDir" On="uninstall" />
+                        <RegistryValue Root="HKCU" Key="Software\[Manufacturer]\[ProductName]" Type="string" Value="" />
+                    </Component>
+                </Directory>
+            </Directory>
+            <Component Id="RegKeyForRunByAdmn64" Guid="7A00FAA3-4A0C-4BE8-AD59-A4640302533F">
+                <RegistryKey Root="HKLM" Key="SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers">
+                    <RegistryValue Type="string" Name="C:\Program Files (x86)\PowerLinkV2\PowerLinkV2.exe" Value="~ RUNASADMIN" KeyPath="yes" />
+                </RegistryKey>
+            </Component>
+            <Component Id="RegKeyForRunByAdmn32" Guid="9550C629-6314-4F72-AA98-B76C913D9E53">
+                <RegistryKey Root="HKLM" Key="SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers">
+                    <RegistryValue Type="string" Name="C:\Program Files\PowerLinkV2\PowerLinkV2.exe" Value="~ RUNASADMIN" KeyPath="yes" />
+                </RegistryKey>
+            </Component>
+        </Directory>
+        <Feature Id="DefaultFeature" Title="Main Feature" Level="1">
+            <ComponentRef Id="AXINTEROP.MSSCRIPTCONTROL.DLL" />
+            <ComponentRef Id="CHECKNETCLASS.DLL" />
+            <ComponentRef Id="EASYMODBUS.DLL" />
+            <ComponentRef Id="INTEROP.MSSCRIPTCONTROL.DLL" />
+            <ComponentRef Id="MFM.DLL" />
+            <ComponentRef Id="POWERLINKV2.EXE" />
+            <ComponentRef Id="SQLITE.INTEROP.DLL" />
+            <ComponentRef Id="SYSTEM.DATA.SQLITE.DLL" />
+            <ComponentRef Id="MFMSETUP.BIN" />
+            <ComponentRef Id="POWERLINKV2.MPLX" />
+            <ComponentRef Id="StartMenuShortcuts" />
+            <ComponentRef Id="RegKeyForRunByAdmn64" />
+            <ComponentRef Id="RegKeyForRunByAdmn32" />
+        </Feature>
+        <Icon Id="DesktopIcon.exe" SourceFile="F:\MyWork\GitHub\AxrCcWebSln\AxrCcWebSite\EngineersKatta\Archive\PowerLinkMSI\ExeFolder\PowerLinkV2\PowerLinkV2.exe" />
+        <Icon Id="StartMenuIcon.exe" SourceFile="F:\MyWork\GitHub\AxrCcWebSln\AxrCcWebSite\EngineersKatta\Archive\PowerLinkMSI\ExeFolder\PowerLinkV2\PowerLinkV2.exe" />
+        <UI />
+    </Product>
+</Wix>

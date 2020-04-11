@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>AmpLoad</title>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', { 'packages': ['corechart'] });
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawMyChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawMyChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('datetime', 'Time');
+        data.addColumn('number', 'Amp');
+
+
+        data.addRows([
+          [new Date('2020-03-19 09:00:00.000'), 76],
+          [new Date('2020-03-19 13:00:00.000'), 21]
+        ]);
+        data.addRows([
+          [new Date('2020-03-19 14:00:00.000'), 18],
+          [new Date('2020-03-19 16:00:00.000'), 11],
+          [new Date('2020-03-19 17:00:00.000'), 63]
+        ]);
+
+
+        // Set chart options
+        var options = {
+          title: 'Amper Loading New',
+          width: 500,
+          height: 300,
+          pointSize: 10,
+          hAxis: {
+            format: 'dd/MM HH:mm'
+          }
+        };
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+        //var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+
+</head>
+<body>
+    <!--Div that will hold the pie chart-->
+    <div id="chart_div"></div>
+</body>
+</html>
